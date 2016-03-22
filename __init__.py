@@ -1,15 +1,8 @@
-from flask import Flask
+from app_config import app
 from controller.user import bp
 
-app = Flask(__name__)
 app.secret_key = 'PS#yio`%_!((f_or(%)))s'
 app.register_blueprint(bp, url_prefix='/user')
-
-
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
 
 # @app.route('/index', methods=['GET', 'POST'])
 # def index():
