@@ -63,7 +63,7 @@ def signup():
 @bp.route('/welcome')
 def welcome():
     print(session['user_name'])
-    return render_template('home.html', name=session['user_name'])
+    return render_template('home.html', name=session['real_name'])
 
 @bp.route('/test')
 def test():
